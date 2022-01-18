@@ -1,0 +1,77 @@
+@import "variablesMixinsFunctions/index.pcss";
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+::placeholder {
+    color: $red;
+}
+img {
+    width: inherit;
+    height: inherit;
+}
+.App {
+    @mixin grid;
+
+    &-logo {
+        animation: App-logo-spin infinite 20s linear;
+        height: $height;
+    }
+
+    &-header {
+        background-color: $red;
+        height: 200px;
+        padding: 20px;
+        color: white;
+    }
+
+    &-title {
+        font-size: 1.5em;
+    }
+
+    &-intro {
+        font-size: large;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 0 auto;
+        width: max-content;
+    }
+    .box-progress {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: max-content;
+        margin: 20px auto;
+        padding: 10px;
+        border: 3px solid $red;
+        progress {
+            transform: scale(1.5);
+            &:indeterminate {
+                display: none;
+            }
+        }
+        input {
+            font-size: 24px;
+        }
+    }
+    ul {
+        margin: 10px auto;
+        padding: 20px;
+        color: white;
+        width: 300px;
+        background: $red;
+    }
+    ul:has(div)  {
+        color: black;
+    }
+}
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
