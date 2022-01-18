@@ -1,18 +1,20 @@
 import React from 'react';
 import img from '../../assets/img/logo512.png'
 
-import './style.pcss'
+import './Card.module.css'
+
+import styles from './Card.module.css'
 
 const Card = () => {
     return (
-        <div className="card">
-            <div className="card-title">
+        <div className={styles.card}>
+            <div className={styles.cardTitle}>
                 TITLE
             </div>
-            <div className="img">
+            <div className={styles.img}>
                 <img src={img} alt="img"/>
             </div>
-            <p className="card-descr">
+            <p className={styles.cardDescr}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </p>
         </div>

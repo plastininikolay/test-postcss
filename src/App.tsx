@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import Card from "./components/card";
+import Card from "./components/Card";
 import ProgressBar from "./components/ProgressBar";
 
 function App() {

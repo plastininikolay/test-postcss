@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import styles from './ProgressBar.module.css'
+
 const ProgressBar = () => {
     const [progress, setProgress] = useState()
 
@@ -8,7 +10,7 @@ const ProgressBar = () => {
     }
 
     return (
-        <div className="box-progress">
+        <div className={styles.boxProgress}>
             <input type="number" value={progress} onChange={cons}/>
             <progress value={progress}  max={100}/>
         </div>
