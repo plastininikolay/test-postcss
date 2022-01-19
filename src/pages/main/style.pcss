@@ -1,0 +1,50 @@
+@import "../../styles/helpers/index.pcss";
+
+
+.App {
+    background: url("./assets/img/background.jpg");
+    &-logo {
+        animation: App-logo-spin infinite 20s linear;
+        height: calc(30px * 3);
+    }
+
+    &-header {
+        color: white $red;
+        size: 200px;
+        padding: 20px;
+        position: fixed;
+    }
+
+    &-title {
+        font-size: 1.5em;
+    }
+
+    &-intro {
+        font-size: large;
+    }
+    .grid {
+        @mixin grid;
+    }
+    ul {
+        margin: 10px auto;
+        padding: 20px;
+        color: white;
+        width: 300px;
+        background: $red;
+    }
+    ul:has(div)  {
+        color: black;
+    }
+}
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (--laptop) {
+    .App {
+        &-header {
+            color: $red white;
+        }
+    }
+}

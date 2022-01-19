@@ -1,4 +1,4 @@
-@import "variablesMixinsFunctions/index.pcss";
+@import "helpers/index.pcss";
 
 body, html {
     margin: 0;
@@ -12,48 +12,7 @@ img {
     width: inherit;
     height: inherit;
 }
-.App {
-    @mixin grid;
 
-    &-logo {
-        animation: App-logo-spin infinite 20s linear;
-        height: $height;
-    }
-
-    &-header {
-        background-color: $red;
-        size: 200px;
-        padding: 20px;
-        color: white;
-        position: fixed;
-    }
-
-    &-title {
-        font-size: 1.5em;
-    }
-
-    &-intro {
-        font-size: large;
-    }
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        margin: 0 auto;
-        width: max-content;
-    }
-    ul {
-        margin: 10px auto;
-        padding: 20px;
-        color: white;
-        width: 300px;
-        background: $red;
-    }
-    ul:has(div)  {
-        color: black;
-    }
-}
-@keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+input, p {
+    font-size: 1rem;
 }

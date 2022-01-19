@@ -1,27 +1,33 @@
-@import "../../styles/variablesMixinsFunctions/index.pcss";
+@import "../../styles/helpers/index.pcss";
 
 $size: 400px;
 
 .card {
-    padding: 5px;
-    border: 1px solid $red;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 3px solid $red;
+    border-radius: 10px;
     background: #fff;
-    width: $size;
-    height: $size;
+    size: $size;
 
     &-title {
         font-size: 20px;
         font-weight: bold;
         color: $red;
     }
-    &-descr {
+    .img {
+        size: 50px;
+        margin: 20px auto;
+        flex: 2
+    }
+    &-button {
+        color: #29316f #ffda90;
         font-style: italic;
+        font-size: 24px / 2;
+        border-radius: 3px;
         &:not(.active, .visible) {
             color: $red;
         }
-    }
-    .img {
-        width: 50px;
-        height: 50px;
     }
 }

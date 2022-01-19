@@ -6809,7 +6809,7 @@ postcss-custom-media@^6.0.0:
 
 postcss-custom-media@^8.0.0:
   version "8.0.0"
-  resolved "https://registry.npmjs.org/postcss-custom-media/-/postcss-custom-media-8.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-8.0.0.tgz#1be6aff8be7dc9bf1fe014bde3b71b92bb4552f1"
   integrity sha512-FvO2GzMUaTN0t1fBULDeIvxr5IvbDXcIatt6pnJghc736nqNgsGao5NT+5+WVLAQiTt6Cb3YUms0jiPaXhL//g==
 
 postcss-custom-properties@^12.1.2:
@@ -7341,6 +7341,11 @@ postcss-pseudoelements@^5.0.0:
   integrity sha1-7vGU6NUkZFylIKlJ6V5RjoEkAss=
   dependencies:
     postcss "^6.0.0"
+
+postcss-pxtorem@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-pxtorem/-/postcss-pxtorem-6.0.0.tgz#f228a4d05d8a73f0642eabae950e2b19836366d7"
+  integrity sha512-ZRXrD7MLLjLk2RNGV6UA4f5Y7gy+a/j1EqjAfp9NdcNYVjUMvg5HTYduTjSkKBkRkfqbg/iKrjMO70V4g1LZeg==
 
 postcss-reduce-initial@^5.0.2:
   version "5.0.2"

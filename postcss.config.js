@@ -6,6 +6,8 @@ const postcssFunctions = require('postcss-functions')
 const postcssShort = require('postcss-short')
 const postcssImport = require('postcss-easy-import')
 const postcssNano = require('cssnano')
+const postcssPxtorem = require('postcss-pxtorem')
+const postcssCustomMedia = require('postcss-custom-media')
 const postcssModules = require('postcss-modules')
 
 module.exports = {
@@ -16,6 +18,18 @@ module.exports = {
         postcssNested(),
         postcssSimpleVars,
         postcssFunctions,
+        postcssCustomMedia,
+        postcssPxtorem({
+            propList: [
+                    'font',
+                    'font-size',
+                    'line-height',
+                    'letter-spacing',
+                    'margin',
+                    'gap',
+                    'grid-gap'
+                ]
+            }),
         postcssNano,
         postcssShort,
     ]
