@@ -1,11 +1,43 @@
 import React from 'react';
 import logo from "../../logo.svg";
 import Card from "../../components/Card";
-import ProgressBar from "../../components/ProgressBar";
+import { createUseStyles } from "react-jss";
+import {CustomTheme} from "../../App";
+
+type ButtonRuleNames = 'myButton' | 'myLabel'
+
+interface PropsButton {
+    children?: React.ReactNode
+    padding: string
+}
 
 const MainPage = () => {
+
+    const useStyles = createUseStyles<ButtonRuleNames, PropsButton, CustomTheme>({
+        myButton: {
+            color: "red",
+            padding: (props) => props.padding,
+            '& span': {
+                // jss-plugin-nested applies this to a child span
+                fontWeight: 'bold' // jss-plugin-camel-case turns this into 'font-weight'
+            }
+        },
+        myLabel: {
+            fontStyle: 'italic'
+        }
+    })
+    const Button = ({children, ...props}: PropsButton) => {
+        const classes = useStyles(props)
+        return (
+            <button className={classes.myButton}>
+                <span className={classes.myLabel}>{children}</span>
+            </button>
+        )
+    }
     return (
         <div className="App">
+            <Button padding="30px">11 111 </Button>
+            <Button padding="60px">qwerty</Button>
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
                 <p>
@@ -30,7 +62,6 @@ const MainPage = () => {
                 <Card/>
                 <Card/>
             </div>
-            <ProgressBar/>
             <ul>
                 <li>1
                     <li>2</li>
